@@ -6,15 +6,9 @@ class App < Sinatra::Base
 
   get "/" do
   
-  erb :super_hero
+  erb "../views/super_hero"
   end
 
-  get "/" do
-  
-  erb :team
-  
-  end
-  
   post '/teams' do
       @team_name = params["team"]["name"]
       @team_motto = params["team"]["motto"]
